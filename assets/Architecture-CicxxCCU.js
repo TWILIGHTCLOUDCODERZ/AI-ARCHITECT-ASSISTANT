@@ -1,4 +1,4 @@
-import{c as De,r as S,g as ls,R as N,j as F,m as It,B as ro}from"./index-Bp1Uo4te.js";import{C as oo}from"./cloud-CdQ4nerK.js";import{L as io,N as us}from"./network-D1JonIaa.js";import{D as Qe}from"./database-CGBI63qw.js";import{S as fs}from"./settings-DmWhrOu8.js";import{Z as ds}from"./zap-CxCTBb24.js";/**
+import{c as De,r as S,g as ls,R as N,j as F,m as It,B as ro}from"./index-CBSvUDRb.js";import{C as oo}from"./cloud-Caf0hc0d.js";import{L as io,N as us}from"./network-DMi4jQsd.js";import{D as Qe}from"./database-D40d3xxc.js";import{S as fs}from"./settings-DW6KTzwd.js";import{Z as ds}from"./zap-D3W1k9vh.js";/**
  * @license lucide-react v0.344.0 - ISC
  *
  * This source code is licensed under the ISC license.
@@ -23,7 +23,7 @@ import{c as De,r as S,g as ls,R as N,j as F,m as It,B as ro}from"./index-Bp1Uo4t
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
- */const ps=De("Workflow",[["rect",{width:"8",height:"8",x:"3",y:"3",rx:"2",key:"by2w9f"}],["path",{d:"M7 11v4a2 2 0 0 0 2 2h4",key:"xkn7yn"}],["rect",{width:"8",height:"8",x:"13",y:"13",rx:"2",key:"1cgmvn"}]]),ys={BASE_URL:"/Azure-AI-Architect-Assistant/",DEV:!1,MODE:"production",PROD:!0,SSR:!1},mr=t=>{let e;const n=new Set,r=(l,f)=>{const h=typeof l=="function"?l(e):l;if(!Object.is(h,e)){const m=e;e=f??(typeof h!="object"||h===null)?h:Object.assign({},e,h),n.forEach(y=>y(e,m))}},o=()=>e,c={setState:r,getState:o,getInitialState:()=>u,subscribe:l=>(n.add(l),()=>n.delete(l)),destroy:()=>{(ys?"production":void 0)!=="production"&&console.warn("[DEPRECATED] The `destroy` method will be unsupported in a future version. Instead use unsubscribe function returned by subscribe. Everything will be garbage-collected if store is garbage-collected."),n.clear()}},u=e=t(r,o,c);return c},xs=t=>t?mr(t):mr;var so={exports:{}},ao={},co={exports:{}},lo={};/**
+ */const ps=De("Workflow",[["rect",{width:"8",height:"8",x:"3",y:"3",rx:"2",key:"by2w9f"}],["path",{d:"M7 11v4a2 2 0 0 0 2 2h4",key:"xkn7yn"}],["rect",{width:"8",height:"8",x:"13",y:"13",rx:"2",key:"1cgmvn"}]]),ys={BASE_URL:"/AI-Architect-Assistant/",DEV:!1,MODE:"production",PROD:!0,SSR:!1},mr=t=>{let e;const n=new Set,r=(l,f)=>{const h=typeof l=="function"?l(e):l;if(!Object.is(h,e)){const m=e;e=f??(typeof h!="object"||h===null)?h:Object.assign({},e,h),n.forEach(y=>y(e,m))}},o=()=>e,c={setState:r,getState:o,getInitialState:()=>u,subscribe:l=>(n.add(l),()=>n.delete(l)),destroy:()=>{(ys?"production":void 0)!=="production"&&console.warn("[DEPRECATED] The `destroy` method will be unsupported in a future version. Instead use unsubscribe function returned by subscribe. Everything will be garbage-collected if store is garbage-collected."),n.clear()}},u=e=t(r,o,c);return c},xs=t=>t?mr(t):mr;var so={exports:{}},ao={},co={exports:{}},lo={};/**
  * @license React
  * use-sync-external-store-shim.production.js
  *
