@@ -32,11 +32,11 @@ const technologies = [
 ];
 
 const technicalProficiency = [
-  { name: 'Azure & AWS', percentage: 90, icon: Cloud },
-  { name: 'Security', percentage: 90, icon: Shield },
-  { name: 'Node.js', percentage: 80, icon: Terminal },
-  { name: 'Python', percentage: 80, icon: Code },
-  { name: 'SQL', percentage: 80, icon: Database },
+  { name: 'Azure & AWS', percentage: 80, icon: Cloud },
+  { name: 'Security', percentage: 80, icon: Shield },
+  { name: 'Node.js', percentage: 75, icon: Terminal },
+  { name: 'Python', percentage: 75, icon: Code },
+  { name: 'SQL', percentage: 70, icon: Database },
   { name: 'AI/ML', percentage: 60, icon: Brain }
 ];
 
@@ -145,7 +145,7 @@ export default function Team() {
           </div>
           <h2 className="text-4xl font-bold text-white mb-4 neon-text">Meet the Creator</h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Cloud Architect & AI Engineer
+          Cloud Design And Solution Engineer
           </p>
         </motion.div>
 
@@ -172,7 +172,7 @@ export default function Team() {
                     <h3 className="text-3xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:via-purple-400 group-hover:to-pink-400 transition-all duration-300">
                       DeepanRaj Vellingiri
                     </h3>
-                    <p className="text-xl text-blue-400/80 mb-4">Cloud & AI Solutions Architect</p>
+                    <p className="text-xl text-blue-400/80 mb-4">Cloud Design And Solution Engineer</p>
                     <div className="flex space-x-4">
                       <motion.a
                         href="mailto:deepanrey@gmail.com"
