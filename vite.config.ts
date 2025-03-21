@@ -35,5 +35,5 @@ export default defineConfig({
       strict: true
     }
   },
-  base: '/Azure-AI-Architect-Assistant/'
+  base: '/AI-ARCHITECT-ASSISTANT/',
 });
