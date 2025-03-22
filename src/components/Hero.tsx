@@ -106,6 +106,23 @@ const features = [
   }
 ];
 
+const learningPlans = [
+  {
+    title: "Azure AI Foundry",
+    description: "Master the fundamentals of Azure AI services and development patterns",
+    url: "https://learn.microsoft.com/en-us/plans/7w07c8tk4m8y4p",
+    icon: Brain,
+    color: "from-blue-500 to-cyan-400"
+  },
+  {
+    title: "Secure Azure & GitHub Development",
+    description: "Learn to build, test, and deploy applications securely with GitHub and Azure",
+    url: "https://learn.microsoft.com/en-us/plans/w1y7uo86pmpzey",
+    icon: Shield,
+    color: "from-purple-500 to-pink-400"
+  }
+];
+
 export default function Hero() {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -202,7 +219,7 @@ export default function Hero() {
                 </motion.a>
 
                 <motion.a
-                  href="https://github.com/TWILIGHTCLOUDCODERZ/Azure-AI-Architect-Assistant"
+                  href="https://github.com/TWILIGHTCLOUDCODERZ/AI-POWERED-INTELIGENCE.git"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative overflow-hidden rounded-2xl bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-blue-500/10 p-1"
@@ -322,6 +339,60 @@ export default function Hero() {
           </motion.div>
 
           <Roadmap className="mb-24" />
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mb-24"
+          >
+            <div className="text-center mb-12">
+              <h3 className="text-3xl font-bold text-white mb-4 neon-text">Get Trained</h3>
+              <p className="text-lg text-gray-400 max-w-3xl mx-auto">
+                Enhance your skills with Microsoft's comprehensive learning plans for the Azure AI Developer Hackathon
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              {learningPlans.map((plan, index) => (
+                <motion.a
+                  key={index}
+                  href={plan.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="group relative overflow-hidden"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <div className={`absolute inset-0 bg-gradient-to-r ${plan.color} opacity-5 group-hover:opacity-10 transition-all duration-300`} />
+                  <div className="relative glow-card rounded-xl p-6 backdrop-blur-sm border border-blue-500/20 group-hover:border-blue-500/40 transition-all duration-300">
+                    <div className="flex items-center mb-4">
+                      <div className={`p-3 rounded-lg bg-gradient-to-r ${plan.color} bg-opacity-10 group-hover:bg-opacity-20 transition-all duration-300`}>
+                        <plan.icon className="w-6 h-6 text-white" />
+                      </div>
+                      <h4 className="text-xl font-semibold text-white ml-4">{plan.title}</h4>
+                    </div>
+                    <p className="text-gray-400 mb-4 group-hover:text-gray-300 transition-colors duration-300">
+                      {plan.description}
+                    </p>
+                    <div className="flex items-center text-blue-400 group-hover:text-blue-300 transition-colors duration-300">
+                      <span>Start Learning</span>
+                      <motion.div
+                        animate={{ x: [0, 5, 0] }}
+                        transition={{ duration: 1.5, repeat: Infinity }}
+                        className="ml-2"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                      </motion.div>
+                    </div>
+                  </div>
+                </motion.a>
+              ))}
+            </div>
+          </motion.div>
         </motion.div>
       </div>
     </div>
