@@ -191,7 +191,7 @@ export default function Hero() {
                         </div>
                         <div className="text-left">
                           <h2 className="text-2xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:via-purple-400 group-hover:to-pink-400 transition-all duration-500">
-                            Experience the Future
+                            Try the AI Application
                           </h2>
                           <p className="text-gray-400 group-hover:text-gray-300 transition-colors">
                             Explore AI-powered cloud architecture design
