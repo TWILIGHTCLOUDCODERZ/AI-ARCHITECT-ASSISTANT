@@ -19,9 +19,7 @@ import {
   Trophy,
   Target,
   CheckCircle,
-  Zap,
-  Sparkles,
-  Heart
+  Zap
 } from 'lucide-react';
 
 const technologies = [
@@ -242,40 +240,10 @@ export default function Team() {
                   transition={{ duration: 0.5 }}
                   className="mb-8 text-center"
                 >
-                  <div className="flex items-center justify-center space-x-4">
-                    <motion.div
-                      animate={{
-                        scale: [1, 1.2, 1],
-                        rotate: [0, 10, -10, 0],
-                      }}
-                      transition={{
-                        duration: 2,
-                        repeat: Infinity,
-                        ease: "easeInOut"
-                      }}
-                    >
-                      <Sparkles className="w-6 h-6 text-purple-400" />
-                    </motion.div>
-                    
-                    <div className="flex justify-center space-x-1 text-lg">
-                      {"ANGEL GOT ME BACK".split("").map((letter, index) => (
-                        <GlitteringLetter key={index} letter={letter} index={index} />
-                      ))}
-                    </div>
-
-                    <motion.div
-                      animate={{
-                        scale: [1, 1.2, 1],
-                        rotate: [0, -10, 10, 0],
-                      }}
-                      transition={{
-                        duration: 2,
-                        repeat: Infinity,
-                        ease: "easeInOut"
-                      }}
-                    >
-                      <Heart className="w-6 h-6 text-pink-400" />
-                    </motion.div>
+                  <div className="flex justify-center space-x-1 text-lg">
+                    {"ANGEL GOT ME BACK".split("").map((letter, index) => (
+                      <GlitteringLetter key={index} letter={letter} index={index} />
+                    ))}
                   </div>
                 </motion.div>
 
