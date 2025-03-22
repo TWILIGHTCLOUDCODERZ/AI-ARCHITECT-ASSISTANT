@@ -19,7 +19,9 @@ import {
   Trophy,
   Target,
   CheckCircle,
-  Zap
+  Zap,
+  Sparkles,
+  Heart
 } from 'lucide-react';
 
 const technologies = [
@@ -34,9 +36,9 @@ const technologies = [
 const technicalProficiency = [
   { name: 'Azure & AWS', percentage: 80, icon: Cloud },
   { name: 'Security', percentage: 80, icon: Shield },
-  { name: 'Node.js', percentage: 75, icon: Terminal },
-  { name: 'Python', percentage: 75, icon: Code },
-  { name: 'SQL', percentage: 70, icon: Database },
+  { name: 'Node.js', percentage: 70, icon: Terminal },
+  { name: 'Python', percentage: 70, icon: Code },
+  { name: 'Database', percentage: 70, icon: Database },
   { name: 'AI/ML', percentage: 60, icon: Brain }
 ];
 
@@ -46,12 +48,6 @@ const keyAchievements = [
     description: 'Discovered and reported CVE-2021-24113, contributing to Microsoft security improvements',
     icon: Shield,
     color: 'from-blue-400 to-cyan-400'
-  },
-  {
-    title: 'Microsoft Kusto Detective Gold Star-2023',
-    description: 'Achieved Gold Star status in Microsoft Kusto Detective Agency',
-    icon: Star,
-    color: 'from-yellow-400 to-orange-400'
   },
   {
     title: 'MSUS Cloud Skills Challenge Champion-2022',
@@ -72,7 +68,6 @@ const keyAchievements = [
     color: 'from-green-400 to-emerald-400'
   }
 ];
-
 const certifications = [
   {
     name: 'AI-102: Microsoft Certified: Azure Administrator Associate',
@@ -118,6 +113,35 @@ const certifications = [
   }
 ];
 
+const GlitteringLetter = ({ letter, index }: { letter: string; index: number }) => {
+  return (
+    <motion.span
+      initial={{ opacity: 0.5 }}
+      animate={{
+        opacity: [0.5, 1, 0.5],
+        textShadow: [
+          "0 0 5px rgba(147, 51, 234, 0.5), 0 0 10px rgba(147, 51, 234, 0.3)",
+          "0 0 10px rgba(147, 51, 234, 0.8), 0 0 20px rgba(147, 51, 234, 0.5), 0 0 30px rgba(147, 51, 234, 0.3)",
+          "0 0 5px rgba(147, 51, 234, 0.5), 0 0 10px rgba(147, 51, 234, 0.3)"
+        ]
+      }}
+      transition={{
+        duration: 2,
+        repeat: Infinity,
+        delay: index * 0.1,
+        ease: "easeInOut"
+      }}
+      className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400"
+      style={{
+        textShadow: "0 0 10px rgba(147, 51, 234, 0.5)",
+        WebkitTextStroke: "1px rgba(147, 51, 234, 0.3)"
+      }}
+    >
+      {letter}
+    </motion.span>
+  );
+};
+
 export default function Team() {
   return (
     <div className="min-h-screen bg-transparent pt-32" id="team">
@@ -145,7 +169,7 @@ export default function Team() {
           </div>
           <h2 className="text-4xl font-bold text-white mb-4 neon-text">Meet the Creator</h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-          Cloud Design And Solution Engineer
+            Cloud Architect & AI Engineer
           </p>
         </motion.div>
 
@@ -172,7 +196,7 @@ export default function Team() {
                     <h3 className="text-3xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:via-purple-400 group-hover:to-pink-400 transition-all duration-300">
                       DeepanRaj Vellingiri
                     </h3>
-                    <p className="text-xl text-blue-400/80 mb-4">Cloud Design And Solution Engineer</p>
+                    <p className="text-xl text-blue-400/80 mb-4">Cloud & AI Solutions Architect</p>
                     <div className="flex space-x-4">
                       <motion.a
                         href="mailto:deepanrey@gmail.com"
@@ -212,7 +236,49 @@ export default function Team() {
                   </div>
                 </div>
 
-                {/* Technical Proficiency Section */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  className="mb-8 text-center"
+                >
+                  <div className="flex items-center justify-center space-x-4">
+                    <motion.div
+                      animate={{
+                        scale: [1, 1.2, 1],
+                        rotate: [0, 10, -10, 0],
+                      }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        ease: "easeInOut"
+                      }}
+                    >
+                      <Sparkles className="w-6 h-6 text-purple-400" />
+                    </motion.div>
+                    
+                    <div className="flex justify-center space-x-1 text-lg">
+                      {"ANGEL GOT ME BACK".split("").map((letter, index) => (
+                        <GlitteringLetter key={index} letter={letter} index={index} />
+                      ))}
+                    </div>
+
+                    <motion.div
+                      animate={{
+                        scale: [1, 1.2, 1],
+                        rotate: [0, -10, 10, 0],
+                      }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        ease: "easeInOut"
+                      }}
+                    >
+                      <Heart className="w-6 h-6 text-pink-400" />
+                    </motion.div>
+                  </div>
+                </motion.div>
+
                 <div className="mb-8">
                   <h4 className="text-xl font-semibold text-white mb-6">Technical Proficiency</h4>
                   <div className="space-y-4">
@@ -268,7 +334,6 @@ export default function Team() {
             transition={{ duration: 0.8 }}
             className="lg:col-span-7"
           >
-            {/* Key Achievements Section */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -300,7 +365,6 @@ export default function Team() {
               </div>
             </motion.div>
 
-            {/* Certifications Section */}
             <div className="glow-card rounded-xl p-8 backdrop-blur-lg">
               <h4 className="text-xl font-semibold text-white mb-6">Certifications</h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
