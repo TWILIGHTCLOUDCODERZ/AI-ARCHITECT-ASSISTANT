@@ -28,7 +28,7 @@ export default function ProjectDemo() {
           <div className="relative aspect-video">
             {/* YouTube iframe */}
             <iframe
-              src="https://www.youtube.com/embed/6kldr_9t9pE?si=6VC1k3KJZtTT3TJU"
+              src="https://www.youtube.com/embed/5_MHqqP_T10?si=fSs34gKda_VSZBAb"
               title="AI Architecture Assistant Demo"
               className="absolute inset-0 w-full h-full rounded-lg"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

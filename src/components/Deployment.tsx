@@ -198,7 +198,11 @@ VITE_AZURE_OPENAI_KEY=your-api-key
 VITE_AZURE_B2C_CLIENT_ID=your-client-id
 VITE_AZURE_B2C_AUTHORITY=https://your-tenant.b2clogin.com/your-tenant.onmicrosoft.com/policy-name
 VITE_AZURE_B2C_KNOWN_AUTHORITY=https://your-tenant.b2clogin.com
-VITE_AZURE_B2C_REDIRECT_URI=http://localhost:5173/`}</code>
+VITE_AZURE_B2C_REDIRECT_URI=http://localhost:5173/
+
+# Azure Storage
+VITE_AZURE_STORAGE_CONNECTION_STRING=your-storage-connection-string
+VITE_AZURE_STORAGE_CONTAINER_NAME=your-container-name`}</code>
               </pre>
             </div>
             <p className="text-gray-400 mt-4 text-sm">
