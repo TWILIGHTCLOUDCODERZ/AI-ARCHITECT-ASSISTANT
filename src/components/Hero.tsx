@@ -1,4 +1,4 @@
-import React, { useState, useEffect, lazy, Suspense } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Brain, 
@@ -128,6 +128,94 @@ export default function Hero() {
 
   return (
     <div className="min-h-screen pt-32">
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+        className="fixed top-24 left-8 z-10 md:absolute"
+      >
+        <motion.a
+          href="https://github.com/TWILIGHTCLOUDCODERZ/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="relative block group"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <motion.div
+            animate={{
+              background: [
+                "radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.2) 0%, rgba(0, 0, 0, 0) 70%)",
+                "radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.2) 0%, rgba(0, 0, 0, 0) 70%)",
+                "radial-gradient(circle at 50% 50%, rgba(236, 72, 153, 0.2) 0%, rgba(0, 0, 0, 0) 70%)"
+              ]
+            }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              repeatType: "reverse"
+            }}
+            className="absolute inset-0 rounded-2xl blur-xl opacity-75 group-hover:opacity-100"
+          />
+
+          <div className="relative bg-transparent backdrop-blur-sm p-4 rounded-2xl transition-all duration-500">
+            <div className="relative w-14 h-14 md:w-16 md:h-16 overflow-hidden rounded-xl">
+              <motion.div
+                animate={{
+                  boxShadow: [
+                    "0 0 20px rgba(59, 130, 246, 0.3)",
+                    "0 0 30px rgba(139, 92, 246, 0.3)",
+                    "0 0 20px rgba(236, 72, 153, 0.3)"
+                  ]
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  repeatType: "reverse"
+                }}
+                className="w-full h-full rounded-xl relative"
+              >
+                <img
+                  src="https://github.com/user-attachments/assets/84d6a344-4692-4e68-8047-c1934ae05ec8"
+                  alt="Logo"
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 opacity-90"
+                />
+
+                <motion.div
+                  animate={{
+                    opacity: [0, 0.3, 0],
+                    left: ["-100%", "200%"]
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    repeatDelay: 3
+                  }}
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12"
+                />
+              </motion.div>
+            </div>
+
+            <motion.div
+              animate={{
+                opacity: [0.2, 0.4, 0.2],
+                borderColor: [
+                  "rgba(59, 130, 246, 0.3)",
+                  "rgba(139, 92, 246, 0.3)",
+                  "rgba(236, 72, 153, 0.3)"
+                ]
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                repeatType: "reverse"
+              }}
+              className="absolute inset-0 rounded-2xl border-2"
+            />
+          </div>
+        </motion.a>
+      </motion.div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -191,7 +279,7 @@ export default function Hero() {
                         </div>
                         <div className="text-left">
                           <h2 className="text-2xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:via-purple-400 group-hover:to-pink-400 transition-all duration-500">
-                            Try the AI Application
+                            Experience the Future
                           </h2>
                           <p className="text-gray-400 group-hover:text-gray-300 transition-colors">
                             Explore AI-powered cloud architecture design
@@ -219,7 +307,7 @@ export default function Hero() {
                 </motion.a>
 
                 <motion.a
-                  href="https://github.com/TWILIGHTCLOUDCODERZ/AI-POWERED-INTELIGENCE.git"
+                  href="https://github.com/TWILIGHTCLOUDCODERZ/Azure-AI-Architect-Assistant"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative overflow-hidden rounded-2xl bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-blue-500/10 p-1"
