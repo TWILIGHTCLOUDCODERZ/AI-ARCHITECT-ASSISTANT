@@ -169,7 +169,7 @@ export default function Team() {
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 neon-text">Meet the Creator</h2>
           <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
-            Cloud Architect & AI Engineer
+            Cloud Design and Solution Engineer
           </p>
         </motion.div>
 
@@ -198,7 +198,7 @@ export default function Team() {
                     <h3 className="text-2xl md:text-3xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:via-purple-400 group-hover:to-pink-400 transition-all duration-300">
                       DeepanRaj Vellingiri
                     </h3>
-                    <p className="text-lg md:text-xl text-blue-400/80 mb-4">Cloud & AI Solutions Architect</p>
+                    <p className="text-lg md:text-xl text-blue-400/80 mb-4">Cloud Design and Solution Engineer</p>
                     <div className="flex justify-center md:justify-start space-x-4">
                       <motion.a
                         href="mailto:deepanrey@gmail.com"
