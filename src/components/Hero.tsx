@@ -307,7 +307,7 @@ export default function Hero() {
                 </motion.a>
 
                 <motion.a
-                  href="https://github.com/TWILIGHTCLOUDCODERZ/AI-Architect-Assistant"
+                  href="https://github.com/TWILIGHTCLOUDCODERZ/AI-POWERED-INTELIGENCE"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative overflow-hidden rounded-2xl bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-blue-500/10 p-1"
